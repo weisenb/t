@@ -1,0 +1,23 @@
+@import url("https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/lxgwwenkai-bold.css");
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+}
+.page {
+  box-sizing: border-box;
+  padding: 15px;
+}
+.title {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.container {
+  box-sizing: border-box;
+  padding: 0 15px;
+}
