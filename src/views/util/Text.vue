@@ -2,14 +2,14 @@
  * @Author: zjh
  * @Date: 2024-10-30 10:49:56
  * @LastEditors: zjh
- * @LastEditTime: 2024-10-30 15:17:49
+ * @LastEditTime: 2024-10-31 10:36:47
  * @Description: 
 -->
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import crypto from 'crypto-js'
-console.log(crypto)
+// console.log(crypto)
 const activeTab = ref('0')
 
 // JSON
@@ -19,7 +19,7 @@ function handleParse() {
     try {
         const obj = JSON.parse(inputText.value)
         viewText.value = JSON.stringify(obj, null, 2)
-    } catch (error) {
+    } catch (error: any) {
         ElMessage({
             message: error?.message,
             type: 'error',
@@ -31,7 +31,7 @@ function handleStringify() {
         let _a
         const obj = eval(`_a=${inputText.value}`)
         viewText.value = JSON.stringify(obj)
-    } catch (error) {
+    } catch (error: any) {
         ElMessage({
             message: error?.message,
             type: 'error',

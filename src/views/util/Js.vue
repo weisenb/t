@@ -2,7 +2,7 @@
  * @Author: zjh
  * @Date: 2024-10-30 15:27:24
  * @LastEditors: zjh
- * @LastEditTime: 2024-10-30 16:55:53
+ * @LastEditTime: 2024-10-31 10:38:08
  * @Description: 
 -->
 <script setup lang="ts">
@@ -14,7 +14,7 @@ function doExecute() {
     try {
         const result = eval(inputText.value)
         setValue(result)
-    } catch (error) {
+    } catch (error: any) {
         ElMessage({
             message: error?.message,
             type: 'error',

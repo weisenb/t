@@ -2,19 +2,21 @@
  * @Author: zjh
  * @Date: 2022-11-02 14:03:04
  * @LastEditors: zjh
- * @LastEditTime: 2024-10-29 16:40:51
+ * @LastEditTime: 2024-10-31 10:23:19
  * @FilePath: \vue3-my-utils\src\views\Home.vue
  * @Description: 
 -->
 <script setup lang="ts">
-import UTILS from "@/config/util";
-console.log(UTILS);
+import utils from "@/config/util";
+
+const homeUtils = utils.filter(item => !item.meta.hide)
+
 </script>
 
 <template>
   <main class="page">
     <div class="blocks">
-      <RouterLink class="block" v-for="util in UTILS" :key="util.path" :to="util.path" :title="util.description">{{
+      <RouterLink class="block" v-for="util in homeUtils" :key="util.path" :to="util.path" :title="util.meta.description">{{
         util.name }}</RouterLink>
     </div>
   </main>

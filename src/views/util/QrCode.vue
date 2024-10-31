@@ -2,7 +2,7 @@
  * @Author: zjh
  * @Date: 2022-11-02 15:30:19
  * @LastEditors: zjh
- * @LastEditTime: 2024-10-30 11:29:00
+ * @LastEditTime: 2024-10-31 10:37:14
  * @FilePath: \vue3-my-utils\src\views\util\QrCode.vue
  * @Description: 二维码
  * https://github.com/leidenglai/opencv-js-qrcode
@@ -91,7 +91,7 @@ const qrOption = ref({
 })
 const gen = () => {
   const canvasEl = document.getElementById('canvas-g')
-  qrcode.toCanvas(canvasEl, inputText.value, qrOption.value, function (error) {
+  qrcode.toCanvas(canvasEl, inputText.value, qrOption.value, function (error:any) {
     if (error) {
       ElMessage({
         message: error,
